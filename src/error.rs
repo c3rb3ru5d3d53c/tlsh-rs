@@ -32,7 +32,7 @@ impl Display for TlshError {
                 write!(f, "TLSH requires an input of at least 50 bytes.")
             }
             TlshError::ParseHexFailed => write!(f, "Can't convert hex string to integer"),
-            TlshError::InvalidQuartiles => write!(f, "Failed to create proper quartiles"),
+            TlshError::InvalidQuartiles => write!(f, "Failed to create correct quartiles"),
         }
     }
 }
