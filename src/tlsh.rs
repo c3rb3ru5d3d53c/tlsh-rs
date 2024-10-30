@@ -208,7 +208,7 @@ impl TlshBuilder {
         let (q1, q2, q3) = find_quartiles(&self.buckets, self.bucket_count);
 
         if q3 == 0 {
-            panic!("q3 = 0")
+            Err(TlshError::InvalidQuartiles)?
         }
 
         let mut tmp = vec![0; self.code_size];
