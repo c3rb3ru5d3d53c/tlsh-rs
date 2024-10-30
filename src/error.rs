@@ -11,6 +11,8 @@ pub enum TlshError {
     MinSizeNotReached,
     /// Fails to parse a hex string to integer.
     ParseHexFailed,
+    /// Failed to create correct quartiles.
+    InvalidQuartiles,
 }
 
 impl From<ParseIntError> for TlshError {
